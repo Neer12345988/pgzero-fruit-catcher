@@ -40,7 +40,7 @@ def update():
             f_or_b = False
         
         if f_or_b == True:
-            while fruit.y > basket.y:
+            if fruit.y > basket.y:
                 fruit.y += 30
             if fruit.colliderect(basket):
                 fruits += 1
@@ -48,8 +48,8 @@ def update():
             elif fruit.y >= HEIGHT:
                 goes += 1
         
-        while f_or_b == False:  
-            while bomb.y > basket.y:
+        if f_or_b == False:  
+            if bomb.y > basket.y:
                 bomb.y += 50
             if bomb.colliderect(basket):
                 is_game_over = True
